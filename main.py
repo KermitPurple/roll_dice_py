@@ -27,6 +27,8 @@ def roll_d100() -> int:
 
 def parse_dice_roll(dice_roll_string: str) -> int:
     f'''
+    parse dice roll string
+    e.g. 10d10, 5d6, d20, 2,d100
     :returns: the roll of the dice
     '''
     match tuple(map(int, filter(lambda x: x, dice_roll_string.strip().lower().split('d')))):
